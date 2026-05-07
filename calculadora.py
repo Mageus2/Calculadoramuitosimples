@@ -7,15 +7,7 @@ def main():
         print("4 - Divisão")
         print("5 - Potenciação")
         escolha=input("Digite o número da operação: ")
-        if escolha.isdigit()!=True:
-            print("Por favor digite um número.")
-            cont=input("Continuar? (s/n): ")
-            cont=cont.lower()
-            if cont!=("s"):
-                print("Ok!")
-                break
-                
-        elif int(escolha) in [1,2,3,4,5]:
+        if escolha.isdigit() and int(escolha) in [1,2,3,4,5]:
             num1=float(input("Digite o primeiro número: "))
             num2=float(input("Digite o segundo número: "))
             if calculo(int(escolha), num1, num2)!=None:
@@ -31,21 +23,14 @@ def main():
                 if cont!=("s"):
                     print("Ok!")
                     break
-                
-                
-        
-           
-            
+                    
         else:
-            print("Escolha um número válido.")
+            print("Por favor digite um número válido.")
             cont=input("Continuar? (s/n): ")
             cont=cont.lower()
             if cont!=("s"):
                 print("Ok!")
                 break
-                
-        
-            
             
                 
 def calculo(operacao, x , y):
@@ -64,13 +49,10 @@ def calculo(operacao, x , y):
             return(round(x/y,2))
     elif operacao==5:
         return(round(x**y,2))
-    
-                
-                
-        
-        
-        
-            
+               
 print("Bem vindo a calculadora!")
 main()
         
+                
+        
+    
