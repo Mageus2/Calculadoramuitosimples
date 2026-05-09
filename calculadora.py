@@ -11,15 +11,15 @@ def main():
             num1=float(input("Digite o primeiro número: "))
             num2=float(input("Digite o segundo número: "))
             if calculo(int(escolha), num1, num2)!=None:
-                print("O resultado é:" , calculo(int(escolha), num1, num2))
+                print(f"O resultado é: , {calculo(int(escolha), num1, num2):.2f}")
                 cont=input("Continuar? (s/n): ")
-                cont=cont.lower()
+                cont=cont.strip().lower()
                 if cont!=("s"):
                     print("Ok!")
                     break
             else:
                 cont=input("Continuar? (s/n): ")
-                cont=cont.lower()
+                cont=cont.strip().lower()
                 if cont!=("s"):
                     print("Ok!")
                     break
@@ -27,7 +27,7 @@ def main():
         else:
             print("Por favor digite um número válido.")
             cont=input("Continuar? (s/n): ")
-            cont=cont.lower()
+            cont=cont.strip().lower()
             if cont!=("s"):
                 print("Ok!")
                 break
@@ -36,23 +36,19 @@ def main():
 def calculo(operacao, x , y):
     
     if operacao==1:
-        return(round(x+y,2))
+        return(x+y)
     elif operacao==2:
-        return(round(x-y,2))
+        return(x-y)
     elif operacao==3:
-        return(round(x*y,2))
+        return(x*y)
     elif operacao==4:
         if y==0:
             print("Não é possível dividir por 0")
             return None
         else:
-            return(round(x/y,2))
+            return(x/y)
     elif operacao==5:
-        return(round(x**y,2))
+        return(x**y)
                
 print("Bem vindo a calculadora!")
 main()
-        
-                
-        
-    
