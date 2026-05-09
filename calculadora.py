@@ -11,7 +11,7 @@ def main():
             num1=float(input("Digite o primeiro número: "))
             num2=float(input("Digite o segundo número: "))
             if calculo(int(escolha), num1, num2)!=None:
-                print(f"O resultado é: , {calculo(int(escolha), num1, num2):.2f}")
+                print(f"O resultado é: {calculo(int(escolha), num1, num2):.2f}")
                 cont=input("Continuar? (s/n): ")
                 cont=cont.strip().lower()
                 if cont!=("s"):
